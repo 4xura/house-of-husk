@@ -193,7 +193,7 @@ int main(void)
 	puts("[*] Setup complete for House of Husk (Attack Chain 2) in glibc-2.39");
 	puts("	 Press ENTER to trigger...");
 	getchar();
-	printf("%X", 0);  // Triggers one_gadget if successful
+	printf("%X", 0);  // Triggers backdoor if successful
 
     return 0;
 }
