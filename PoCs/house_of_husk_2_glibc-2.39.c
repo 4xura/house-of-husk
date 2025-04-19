@@ -195,6 +195,6 @@ int main(void)
   getchar();
   printf("%X", 0);  // Triggers backdoor if successful
 
-    return 0;
+  return 0;
 }
 
