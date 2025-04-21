@@ -1,7 +1,7 @@
 # house-of-husk
 PoCs for House of Husk in heap exploitation, leveraging Largebin Attacks for demonstration against the most modern versions of glibc.
 
-Details of the house are introduced in this blog post:
+Details of the house are introduced in this blog post: https://4xura.com/pwn/house-of-husk/
 
 To build all, enter the [PoCs directory](https://github.com/4xura/house-of-husk/tree/main/PoCs) and run:
 
