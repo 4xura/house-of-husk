@@ -3,7 +3,7 @@
  * Author  : Axura
  * Target  : glibc 2.41 on Arch Linux
  * Purpose : Attack chain 1 (hijack of __printf_arginfo_table via Largebin Attack)
- * Website :
+ * Website : https://4xura.com/pwn/house-of-husk/
  *
  *     this PoC uses a backdoor() function for reliable exploitation flow.
  *   - A real-world payload may involve stack frame manipulation (for one gadget), ROP, ORW, or constraint-satisfying gadgets.
